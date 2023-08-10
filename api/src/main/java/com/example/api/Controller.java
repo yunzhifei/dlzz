@@ -2,6 +2,8 @@ package com.example.api;
 
 import com.example.dao.dao.UserAccountMapper;
 import com.example.dao.dto.UserAccount;
+import com.example.dao.second.LogRecordMapper;
+import com.example.dao.seconddto.LogRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +20,9 @@ public class Controller {
     @Resource
     private UserAccountMapper userAccountMapper;
 
+    @Resource
+    private LogRecordMapper logRecordMapper;
+
     @RequestMapping(path = {"index","/"})
     public String index(){
         UserAccount userAccount = new UserAccount();
@@ -26,12 +31,14 @@ public class Controller {
         userAccount.setName("name");
         userAccount.setPwd("pwd");
         userAccount.setStatus(1);
-//        userAccountMapper.insertSelective(userAccount);
+//        int i = userAccountMapper.insertSelective(userAccount);
+//        logger.info("i=" + i);
         UserAccount userAccount1 = userAccountMapper.selectByPrimaryKey(1);
 
-        logger.error("error");
-        logger.info("info"+ userAccount1);
-        logger.warn("warn");
+        LogRecord logRecord = new LogRecord();
+        logRecord.setName("1");
+        int insert = logRecordMapper.insert(logRecord);
+
         return "index";
     }
 
