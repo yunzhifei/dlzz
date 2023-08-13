@@ -10,6 +10,7 @@ spring:
       jdbcUrl: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8
       username: root
       password: a19940129
+
 mybatis:
   mapper-locations: classpath:mapper/*.xml
 logging:
