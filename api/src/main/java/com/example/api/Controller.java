@@ -1,5 +1,6 @@
 package com.example.api;
 
+import com.example.Req;
 import com.example.dao.dao.UserAccountMapper;
 import com.example.dao.dto.UserAccount;
 import com.example.dao.second.LogRecordMapper;
@@ -7,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -23,9 +25,9 @@ public class Controller {
     @Resource
     private LogRecordMapper logRecordMapper;
 
-    @RequestMapping(path = {"index", "/"})
+    @RequestMapping(path = {"index", "/"}, method = {RequestMethod.GET, RequestMethod.POST})
     @Transactional(transactionManager = "blogSqlTransactionManager", rollbackFor = Exception.class)
-    public String index() {
+    public String index(Req req) {
         UserAccount userAccount = new UserAccount();
         userAccount.setCreated(new Date());
         userAccount.setModified(new Date());

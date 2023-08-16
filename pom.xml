@@ -27,6 +27,7 @@
         <module>dao</module>
         <module>biz</module>
         <module>service</module>
+        <module>common</module>
     </modules>
 
 
@@ -136,14 +137,17 @@
                 <artifactId>api</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.example</groupId>
+                <artifactId>common</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
             <!--本工程模块结束-->
         </dependencies>
 
     </dependencyManagement>
 
-    <dependencies>
-
-    </dependencies>
 
 
     <build>
