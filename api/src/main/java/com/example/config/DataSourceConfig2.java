@@ -11,6 +11,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
 
@@ -52,6 +53,11 @@ public class DataSourceConfig2 {
     @Bean(name = "blogSqlSessionTemplate2")
     public SqlSessionTemplate blogSqlSessionTemplate(@Qualifier("blogSqlSessionFactory2") SqlSessionFactory sqlSessionFactory) throws Exception {
         return new SqlSessionTemplate(sqlSessionFactory);
+    }
+
+    @Bean("blogSqlTransactionManager2")
+    public DataSourceTransactionManager blogSqlTransactionManager(@Qualifier("blogDataSource2") DataSource dataSource) {
+        return new DataSourceTransactionManager(dataSource);
     }
 
 }
