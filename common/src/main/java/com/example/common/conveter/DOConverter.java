@@ -18,7 +18,7 @@ public class DOConverter {
         if (dOList == null) {
             return Collections.emptyList();
         }
-        List<Model> modelList = new ArrayList<>();
+        List<Model> modelList = new ArrayList<Model>();
         for (DO dO : dOList) {
             modelList.add(toModel(dO));
         }
@@ -38,7 +38,7 @@ public class DOConverter {
         if (modelList == null) {
             return Collections.emptyList();
         }
-        List<DO> dOList = new ArrayList<>();
+        List<DO> dOList = new ArrayList<DO>();
         for (Model model : modelList) {
             dOList.add(toDO(model));
         }

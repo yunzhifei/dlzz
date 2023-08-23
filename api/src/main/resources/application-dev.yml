@@ -10,8 +10,19 @@ spring:
       jdbcUrl: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8
       username: root
       password: a19940129
-
+  application:
+    name: service-provider
+  cloud:
+    consul:
+      ip-address: 127.0.0.1
+      port: 8500
+      discovery:
+        service-name: service-provider
+        health-check-path: /test/list
+        health-check-timeout: 1s
+        instance-id: ${spring.application.name}:${server.port}
 mybatis:
   mapper-locations: classpath:mapper/*.xml
 logging:
   config: classpath:log4j2-spring.xml
+

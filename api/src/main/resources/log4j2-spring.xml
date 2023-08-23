@@ -64,7 +64,7 @@
 
         <logger name="org.mybatis" level="INFO"></logger>
 
-        <root level="info">
+        <root level="all">
             <appender-ref ref="Console"/>
             <appender-ref ref="RollingFileInfo"/>
             <appender-ref ref="RollingFileWarn"/>
