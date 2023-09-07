@@ -13,11 +13,11 @@
     <packaging>jar</packaging>
 
     <groupId>com.example</groupId>
-    <artifactId>api</artifactId>
+    <artifactId>provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>api</name>
 
-    <description>api</description>
+    <description>provider</description>
 
     <properties>
         <java.version>1.8</java.version>

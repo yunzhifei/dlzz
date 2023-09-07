@@ -23,11 +23,12 @@
     </properties>
 
     <modules>
-        <module>api</module>
+        <module>provider</module>
         <module>dao</module>
         <module>biz</module>
         <module>service</module>
         <module>common</module>
+        <module>client</module>
     </modules>
 
 
@@ -148,6 +149,11 @@
             </dependency>
             <dependency>
                 <groupId>com.example</groupId>
+                <artifactId>client</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.example</groupId>
                 <artifactId>biz</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
@@ -160,7 +166,7 @@
 
             <dependency>
                 <groupId>com.example</groupId>
-                <artifactId>api</artifactId>
+                <artifactId>provider</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
