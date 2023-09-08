@@ -42,6 +42,10 @@
             <groupId>com.example</groupId>
             <artifactId>biz</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+        </dependency>
     </dependencies>
     <!--一依赖-->
 
