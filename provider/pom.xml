@@ -15,7 +15,7 @@
     <groupId>com.example</groupId>
     <artifactId>provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>api</name>
+    <name>provider</name>
 
     <description>provider</description>
 

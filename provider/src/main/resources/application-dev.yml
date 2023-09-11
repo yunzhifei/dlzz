@@ -1,9 +1,9 @@
 server:
   port: 8990
 spring:
-#  mvc:
-#    pathmatch:
-#      matching-strategy: ant_path_matcher
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   datasource:
     db1:
       jdbcUrl: jdbc:mysql://127.0.0.1:3306/dlzz?useUnicode=true&characterEncoding=utf8
